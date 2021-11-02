@@ -58,9 +58,9 @@ export const Firstdata = (props) => {
 
 
       
-        <TextField value={props.value.firstname} onChange={props.handlechange('firstname')} variant='standard' label='First Name'  className={classes.texti} placeholder='First Name' color='secondary'/>
-        <TextField value={props.value.lastname} onChange={props.handlechange('lastname')} variant='standard' label='Last Name'  className={classes.texti} placeholder='Last Name' color='secondary'/>
-        <TextField  value={props.value.email} onChange={props.handlechange('email')} variant='standard' label='Email'  className={classes.texti} placeholder='Email' color='secondary'/>
+        <TextField value={props.value.firstname} onChange={props.handlechange('firstname')} required variant='standard' label='First Name'  className={classes.texti} placeholder='First Name' color='secondary'/>
+        <TextField value={props.value.lastname} onChange={props.handlechange('lastname')} required variant='standard' label='Last Name'  className={classes.texti} placeholder='Last Name' color='secondary'/>
+        <TextField  value={props.value.email} onChange={props.handlechange('email')} required variant='standard' label='Email'  className={classes.texti} placeholder='Email' color='secondary'/>
 
 
               <Button onClick={Continue} className={classes.btn} variant='contained' color='secondary'>Continue  <NavigateNextOutlined

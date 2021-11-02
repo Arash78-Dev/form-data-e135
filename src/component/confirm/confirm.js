@@ -61,12 +61,18 @@ export const Confirm = (props) => {
 
     const Continue = (e)=>{
         e.preventDefault();
-        
+        if(props.value.firstname==='' || props.value.lastname==='' || props.value.email==='' || props.value.city===''|| props.value.occupation==='' || props.value.bio==='' )
+        {
+            alert('you should enter the all data')
+        }
+    else{
         axios.post('https://form-data-e123-default-rtdb.firebaseio.com/login.json',props.value).then((response)=>{
             props.nextstep();
         }).catch((err)=>{
             console.log(err)
         })
+    }
+        
         }
     
     const Back = (e)=>{
